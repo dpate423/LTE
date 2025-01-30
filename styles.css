@@ -1,0 +1,232 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #004885; /* Dark blue for professional look */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content, nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #FFD700; /* Gold for active/hover state */
+    border-bottom: 2px solid #FFD700;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Info Sections */
+.info-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px; /* Container width */
+}
+
+#about, #history {
+    flex: 1 1 45%; /* Each takes up roughly half the container */
+    background-color: #e8f0fe; /* Light blue background for contrast */
+    padding: 2rem;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center; /* Centers the text */
+}
+
+#about h2, #history h2 {
+    color: #004885; /* Dark blue for headings */
+    margin-bottom: 20px;
+}
+
+#about p, #history p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Adds space between paragraphs */
+}
+
+/* Services Section */
+.services {
+    background-color: white;
+    padding: 2rem;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-item {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-left: 5px solid #004885;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    color: #004885;
+    margin-top: 0;
+}
+
+.service-item p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Machines Section */
+.machines {
+    background-color: white;
+    padding: 2rem;
+    margin: 20px auto; /* Center the machines section */
+    max-width: 1200px; /* Limit the width of the machines section */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.machine-item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.machine-image {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.machine-text {
+    flex: 1;
+}
+
+.machine-text h3 {
+    color: #004885;
+    margin: 0 0 10px 0;
+}
+
+.machine-text p {
+    margin: 0; /* Remove margin for a compact look */
+}
+
+/* Contact Section */
+.contact-info {
+    background-color: white;
+    padding: 2rem;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px; /* Limits the width and centers the contact info */
+    text-align: center;
+}
+
+.contact-info h2 {
+    color: #004885;
+    margin-bottom: 1rem;
+}
+
+.contact-info p, .contact-info address {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #004885;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the map corners are rounded */
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004885;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .info-sections {
+        flex-direction: column;
+    }
+
+    #about, #history {
+        flex: 1 1 100%; /* Each section takes full width */
+    }
+}
+
+@media (max-width: 600px) {
+    header, .header-content, nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
